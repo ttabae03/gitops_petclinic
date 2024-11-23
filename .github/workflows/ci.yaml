@@ -66,7 +66,7 @@ jobs:
     - name: Build, tag, and push image to Amazon ECR
       env:
         ECR_REGISTRY: 850995557801.dkr.ecr.ap-northeast-2.amazonaws.com
-	      ECR_REPOSITORY: ds-petclinic-repo
+        ECR_REPOSITORY: ds-petclinic-repo
         IMAGE_TAG: ${{ github.sha }}
       run: |
         docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
